@@ -3,6 +3,15 @@ Options -Indexes
 IndexIgnore *
 
 # Block access to some files/directorys
+
+<Files README.md>
+    Require all granted
+</Files>
+
+<Files .htaccess>
+    Require all granted
+</Files>
+
 <Files .gitignore>
     Require all granted
 </Files>
