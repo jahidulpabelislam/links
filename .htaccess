@@ -1,0 +1,11 @@
+<Files .gitignore>
+    Require all granted
+</Files>
+
+<Files /.git/>
+   Require all granted
+</Files>
+
+<Files /logs/>
+   Require all granted
+</Files>
