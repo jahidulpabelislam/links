@@ -186,6 +186,32 @@
     text-decoration: none;
 }
 
+.social-link--npm:hover .social-link__image,
+.social-link--npm:focus .social-link__image {
+    background-color: $npm-colour;
+}
+
+.social-link--npm:hover .social-link__text,
+.social-link--npm:focus .social-link__text {
+    color: $npm-colour;
+}
+
+.social-link--packagist .social-link__image {
+    background-color: transparent;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.social-link--packagist:hover .social-link__image,
+.social-link--packagist:focus .social-link__image {
+    filter: none;
+}
+
+.social-link--packagist:hover .social-link__text,
+.social-link--packagist:focus .social-link__text {
+    color: $packagist-colour;
+}
+
 /* Only for Desktops */
 @media only screen and (min-width: $desktop-width) {
     .page__inner {

@@ -134,11 +134,11 @@ body {
 
 .social-link--github:hover .social-link__image,
 .social-link--github:focus .social-link__image {
-  background-color: #e52525; }
+  background-color: #0f7c10; }
 
 .social-link--github:hover .social-link__text,
 .social-link--github:focus .social-link__text {
-  color: #e52525; }
+  color: #0f7c10; }
 
 .social-link--instagram:hover .social-link__text,
 .social-link--instagram:focus .social-link__text {
@@ -245,6 +245,27 @@ body {
 .social-link--snapchat:focus .social-link__text {
   color: #fffc00;
   text-decoration: none; }
+
+.social-link--npm:hover .social-link__image,
+.social-link--npm:focus .social-link__image {
+  background-color: #cb3837; }
+
+.social-link--npm:hover .social-link__text,
+.social-link--npm:focus .social-link__text {
+  color: #cb3837; }
+
+.social-link--packagist .social-link__image {
+  background-color: transparent;
+  border-radius: 50%;
+  filter: grayscale(100%); }
+
+.social-link--packagist:hover .social-link__image,
+.social-link--packagist:focus .social-link__image {
+  filter: none; }
+
+.social-link--packagist:hover .social-link__text,
+.social-link--packagist:focus .social-link__text {
+  color: #f28d1a; }
 
 /* Only for Desktops */
 @media only screen and (min-width: 1200px) {
