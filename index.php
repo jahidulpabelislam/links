@@ -64,11 +64,7 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
         <meta name="msapplication-config" content="<?php asset("/assets/favicons/browserconfig.xml"); ?>" />
         <meta name="theme-color" content="#f5f5f5" />
 
-        <?php if ($isDev) { ?>
-            <link href="<?php asset("/assets/css/main.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
-        <?php } else { ?>
-            <link href="<?php asset("/assets/css/main.min.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
-        <?php } ?>
+        <link href="<?php asset("/assets/css/main" . ($isDev ? "" : ".min" ) . ".css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
     </head>
 
     <body>
@@ -101,11 +97,7 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
             </div>
         </main>
 
-        <?php if ($isDev) { ?>
-            <script src="<?php asset("/assets/js/main.js"); ?>" type="application/javascript"></script>
-        <?php } else { ?>
-            <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
-        <?php } ?>
+        <script src="<?php asset("/assets/js/main" . ($isDev ? "" : ".min") . ".js"); ?>" type="application/javascript"></script>
         <script type="application/javascript">
             jQuery(function() {
                 jQuery(".page").adjustHeightForScreen();
