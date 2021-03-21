@@ -12,7 +12,7 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
 <html lang="en-GB">
     <head>
         <?php
-        $title = " Links | Jahidul Pabel Islam - Full Stack Developer";
+        $title = "Links | Jahidul Pabel Islam - Full Stack Developer";
         $description = "Links for Jahidul Pabel Islam, a Full Stack Developer in Web &amp; Software based at Bognor Regis, West Sussex down by the South Coast of England.";
         ?>
 
