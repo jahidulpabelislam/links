@@ -75,28 +75,28 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
         <main class="page">
             <div class="page__inner">
                 <a class="social-link social-link--linkedin" href="https://uk.linkedin.com/in/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="<?php asset("/assets/images/linkedin.svg"); ?>" alt="Find me on LinkedIn /jahidulpabelislam" />
-                    <p class="social-link__text">/jahidulpabelislam</p>
+                    <img class="social-link__image" src="<?php asset("/assets/images/linkedin.svg"); ?>" alt="Find me on LinkedIn jahidulpabelislam" />
+                    &nbsp;<p class="social-link__text">jahidulpabelislam</p>
                 </a>
 
                 <a class="social-link social-link--github" href="https://github.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="<?php asset("/assets/images/github.svg"); ?>" alt="Find me on GitHub /jahidulpabelislam" />
-                    <p class="social-link__text">/jahidulpabelislam</p>
+                    <img class="social-link__image" src="<?php asset("/assets/images/github.svg"); ?>" alt="Find me on GitHub jahidulpabelislam" />
+                    &nbsp;<p class="social-link__text">jahidulpabelislam</p>
                 </a>
 
                 <a class="social-link social-link--instagram" href="https://instagram.com/jpi.dev/" target="_blank" rel="noopener noreferrer">
                     <span class="social-link__image"><i></i></span>
-                    <p class="social-link__text">@jpi.dev</p>
+                    &nbsp;<p class="social-link__text">jpi.dev</p>
                 </a>
 
                 <a class="social-link social-link--npm" href="https://www.npmjs.com/~jahidulpabelislam" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="<?php asset("/assets/images/npm.png"); ?>" alt="Find me on NPM ~jahidulpabelislam" />
-                    <p class="social-link__text">~jahidulpabelislam</p>
+                    <img class="social-link__image" src="<?php asset("/assets/images/npm.png"); ?>" alt="Find me on NPM jahidulpabelislam" />
+                    &nbsp;<p class="social-link__text">jahidulpabelislam</p>
                 </a>
 
                 <a class="social-link social-link--packagist" href="https://packagist.org/users/jahidulpabelislam/packages/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="<?php asset("/assets/images/packagist.png"); ?>" alt="Find me on Packagist @jahidulpabelislam" />
-                    <p class="social-link__text">@jahidulpabelislam</p>
+                    <img class="social-link__image" src="<?php asset("/assets/images/packagist.png"); ?>" alt="Find me on Packagist jahidulpabelislam" />
+                    &nbsp;<p class="social-link__text">jahidulpabelislam</p>
                 </a>
             </div>
         </main>
