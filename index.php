@@ -1,6 +1,10 @@
 <?php
 include_once __DIR__ . "/functions.php";
 
+$environment = getenv("APPLICATION_ENV") ?? "local";
+
+$liveDomain = "https://links.jahidulpabelislam.com";
+
 $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "0");
 ?>
 
@@ -25,13 +29,19 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
         <meta property="og:type" content="website" />
         <meta property="og:title" content="<?php echo $title; ?>" />
         <meta property="og:description" content="<?php echo $description; ?>" />
-        <meta property="og:url" content="https://links.jahidulpabelislam.com" />
+        <meta property="og:url" content="<?php echo $liveDomain ?>" />
         <meta property="og:site_name" content="Jahidul Pabel Islam" />
 
-        <meta property="og:image" content="https://links.jahidulpabelislam.com<?php asset("/assets/images/social-card.png"); ?>" />
+        <meta property="og:image" content="<?php echo $liveDomain ?><?php asset("/assets/images/social-card.png"); ?>" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="<?php echo $title; ?>" />
+
+        <?php if ($environment === "production") { ?>
+            <link rel="canonical" href="<?php echo $liveDomain ?>" />
+        <?php } else { ?>
+            <meta name="robots" content="noindex,nofollow" />
+        <?php } ?>
 
         <link rel="apple-touch-icon" sizes="57x57" href="<?php asset("/assets/favicons/apple-touch-icon-57x57.png"); ?>" />
         <link rel="apple-touch-icon" sizes="60x60" href="<?php asset("/assets/favicons/apple-touch-icon-60x60.png"); ?>" />
