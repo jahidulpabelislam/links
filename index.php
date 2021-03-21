@@ -1,3 +1,7 @@
+<?php
+include_once __DIR__ . "/functions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
@@ -11,7 +15,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Jahidul Pabel Islam" />
-        <meta name="description" content="<?php echo $description ?>" />
+        <meta name="description" content="<?php echo $description; ?>" />
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -22,45 +26,45 @@
         <meta property="og:url" content="https://links.jahidulpabelislam.com" />
         <meta property="og:site_name" content="Jahidul Pabel Islam" />
 
-        <meta property="og:image" content="https://links.jahidulpabelislam.com/assets/images/social-card.png" />
+        <meta property="og:image" content="https://links.jahidulpabelislam.com<?php asset("/assets/images/social-card.png"); ?>" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="<?php echo $title; ?>" />
 
-        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="194x194" href="/assets/favicons/favicon-194x194.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
-        <link rel="manifest" href="/assets/favicons/site.webmanifest" />
-        <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#0375b4" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="57x57" href="<?php asset("/assets/favicons/apple-touch-icon-57x57.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="60x60" href="<?php asset("/assets/favicons/apple-touch-icon-60x60.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="72x72" href="<?php asset("/assets/favicons/apple-touch-icon-72x72.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php asset("/assets/favicons/apple-touch-icon-76x76.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="114x114" href="<?php asset("/assets/favicons/apple-touch-icon-114x114.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php asset("/assets/favicons/apple-touch-icon-120x120.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="144x144" href="<?php asset("/assets/favicons/apple-touch-icon-144x144.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php asset("/assets/favicons/apple-touch-icon-152x152.png"); ?>" />
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php asset("/assets/favicons/apple-touch-icon-180x180.png"); ?>" />
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php asset("/assets/favicons/favicon-32x32.png"); ?>" />
+        <link rel="icon" type="image/png" sizes="194x194" href="<?php asset("/assets/favicons/favicon-194x194.png"); ?>" />
+        <link rel="icon" type="image/png" sizes="192x192" href="<?php asset("/assets/favicons/android-chrome-192x192.png"); ?>" />
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php asset("/assets/favicons/favicon-16x16.png"); ?>" />
+        <link rel="manifest" href="<?php asset("/assets/favicons/site.webmanifest"); ?>" />
+        <link rel="mask-icon" href="<?php asset("/assets/favicons/safari-pinned-tab.svg"); ?>" color="#0375b4" />
+        <link rel="shortcut icon" href="<?php asset("/favicon.ico"); ?>" />
         <meta name="msapplication-TileColor" content="#0375b4" />
-        <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png" />
-        <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml" />
+        <meta name="msapplication-TileImage" content="<?php asset("/assets/favicons/mstile-144x144.png"); ?>" />
+        <meta name="msapplication-config" content="<?php asset("/assets/favicons/browserconfig.xml"); ?>" />
         <meta name="theme-color" content="#f5f5f5" />
 
-        <link href="/assets/css/main.min.css" rel="stylesheet" type="text/css" media="all" title="style"/>
+        <link href="<?php asset("/assets/css/main.min.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
     </head>
 
     <body>
         <main class="page">
             <div class="page__inner">
                 <a class="social-link social-link--facebook" href="https://facebook.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="/assets/images/facebook.svg" alt="Add Me facebook.com/jahidulpabelislam" />
+                    <img class="social-link__image" src="<?php asset("/assets/images/facebook.svg"); ?>" alt="Add Me facebook.com/jahidulpabelislam" />
                     <p class="social-link__text">/jahidulpabelislam</p>
                 </a>
 
                 <a class="social-link social-link--twitter" href="https://twitter.com/itsjahidulislam/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="/assets/images/twitter.png" alt="Follow Me @ItsJahidulIslam" />
+                    <img class="social-link__image" src="<?php asset("/assets/images/twitter.png"); ?>" alt="Follow Me @ItsJahidulIslam" />
                     <p class="social-link__text">@ItsJahidulIslam</p>
                 </a>
 
@@ -75,12 +79,12 @@
                 </a>
 
                 <a class="social-link social-link--linkedin" href="https://uk.linkedin.com/in/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="/assets/images/linkedin.svg" alt="Find me on LinkedIn /jahidulpabelislam" />
+                    <img class="social-link__image" src="<?php asset("/assets/images/linkedin.svg"); ?>" alt="Find me on LinkedIn /jahidulpabelislam" />
                     <p class="social-link__text">/jahidulpabelislam</p>
                 </a>
 
                 <a class="social-link social-link--github" href="https://github.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                    <img class="social-link__image" src="/assets/images/github.svg" alt="Find me on GitHub /jahidulpabelislam" />
+                    <img class="social-link__image" src="<?php asset("/assets/images/github.svg"); ?>" alt="Find me on GitHub /jahidulpabelislam" />
                     <p class="social-link__text">/jahidulpabelislam</p>
                 </a>
 
@@ -91,7 +95,7 @@
             </div>
         </main>
 
-        <script src="/assets/js/main.min.js" type="application/javascript"></script>
+        <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
         <script type="application/javascript">
             jQuery(document).on("ready", function() {
                 new StickyFooter(".page");
