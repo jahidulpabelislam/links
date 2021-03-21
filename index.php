@@ -52,67 +52,49 @@
     </head>
 
     <body>
-        <div class="page-container">
-            <main class="main-content social-links-page">
-                <div class="container">
-                    <div class="social-link-container">
-                        <a class="social-link social-link--facebook" href="https://facebook.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                            <img class="social-link__image" src="/assets/images/facebook.svg" alt="Add Me facebook.com/jahidulpabelislam" />
-                            <p class="social-link__text">/jahidulpabelislam</p>
-                        </a>
-                    </div>
+        <main class="page">
+            <div class="page__inner">
+                <a class="social-link social-link--facebook" href="https://facebook.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
+                    <img class="social-link__image" src="/assets/images/facebook.svg" alt="Add Me facebook.com/jahidulpabelislam" />
+                    <p class="social-link__text">/jahidulpabelislam</p>
+                </a>
 
-                    <div class="social-link-container">
-                        <a class="social-link social-link--twitter" href="https://twitter.com/itsjahidulislam/" target="_blank" rel="noopener noreferrer">
-                            <img class="social-link__image" src="/assets/images/twitter.png" alt="Follow Me @ItsJahidulIslam" />
-                            <p class="social-link__text">@ItsJahidulIslam</p>
-                        </a>
-                    </div>
+                <a class="social-link social-link--twitter" href="https://twitter.com/itsjahidulislam/" target="_blank" rel="noopener noreferrer">
+                    <img class="social-link__image" src="/assets/images/twitter.png" alt="Follow Me @ItsJahidulIslam" />
+                    <p class="social-link__text">@ItsJahidulIslam</p>
+                </a>
 
-                    <div class="social-link-container">
-                        <a class="social-link social-link--instagram" href="https://instagram.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                            <span class="social-link__image"><i></i></span>
-                            <p class="social-link__text">@jahidulpabelislam</p>
-                        </a>
-                    </div>
+                <a class="social-link social-link--instagram" href="https://instagram.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
+                    <span class="social-link__image"><i></i></span>
+                    <p class="social-link__text">@jahidulpabelislam</p>
+                </a>
 
-                    <div class="social-link-container social-link-container--snapchat">
-                        <a class="social-link social-link--snapchat" href="https://snapchat.com/add/jahidulpislam/" target="_blank" rel="noopener noreferrer">
-                            <object class="social-link__image" data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username=jahidulpislam&amp;type=PNG" type="image/png"></object>
-                            <p class="social-link__text">jahidulpislam</p>
-                        </a>
-                    </div>
+                <a class="social-link social-link--snapchat" href="https://snapchat.com/add/jahidulpislam/" target="_blank" rel="noopener noreferrer">
+                    <object class="social-link__image" data="https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username=jahidulpislam&amp;type=PNG" type="image/png"></object>
+                    <p class="social-link__text">jahidulpislam</p>
+                </a>
 
-                    <div class="social-link-container">
-                        <a class="social-link social-link--linkedin" href="https://uk.linkedin.com/in/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                            <img class="social-link__image" src="/assets/images/linkedin.svg" alt="Find me on LinkedIn /jahidulpabelislam" />
-                            <p class="social-link__text">/jahidulpabelislam</p>
-                        </a>
-                    </div>
+                <a class="social-link social-link--linkedin" href="https://uk.linkedin.com/in/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
+                    <img class="social-link__image" src="/assets/images/linkedin.svg" alt="Find me on LinkedIn /jahidulpabelislam" />
+                    <p class="social-link__text">/jahidulpabelislam</p>
+                </a>
 
-                    <div class="social-link-container">
-                        <a class="social-link social-link--github" href="https://github.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
-                            <img class="social-link__image" src="/assets/images/github.svg" alt="Find me on GitHub /jahidulpabelislam" />
-                            <p class="social-link__text">/jahidulpabelislam</p>
-                        </a>
-                    </div>
+                <a class="social-link social-link--github" href="https://github.com/jahidulpabelislam/" target="_blank" rel="noopener noreferrer">
+                    <img class="social-link__image" src="/assets/images/github.svg" alt="Find me on GitHub /jahidulpabelislam" />
+                    <p class="social-link__text">/jahidulpabelislam</p>
+                </a>
 
-                    <div class="social-link-container">
-                        <a class="social-link social-link--instagram" href="https://instagram.com/jpi.dev/" target="_blank" rel="noopener noreferrer">
-                            <span class="social-link__image"><i></i></span>
-                            <p class="social-link__text">@jpi.dev</p>
-                        </a>
-                    </div>
-                </div>
-            </main>
-        </div>
+                <a class="social-link social-link--instagram" href="https://instagram.com/jpi.dev/" target="_blank" rel="noopener noreferrer">
+                    <span class="social-link__image"><i></i></span>
+                    <p class="social-link__text">@jpi.dev</p>
+                </a>
+            </div>
+        </main>
 
         <script src="/assets/js/main.min.js" type="application/javascript"></script>
         <script type="application/javascript">
-            window.jpi = window.jpi || {};
-            window.jpi.css = {"tabletWidth": 768};
             jQuery(document).on("ready", function() {
-                jpi.stickyFooter= new StickyFooter('.main-content');
+                new StickyFooter(".page");
             });
         </script>
     </body>

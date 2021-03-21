@@ -1,0 +1,220 @@
+/* For all devices */
+.page {
+    display: flex;
+    transition: all 1s ease-in-out;
+    margin-bottom: 0;
+}
+
+.page__inner {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
+.social-link {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    display: block;
+    margin: 5px;
+    padding: 15px;
+}
+
+.social-link__image {
+    height: 40px;
+    background-color: #000000;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+.social-link:hover .social-link__image,
+.social-link:focus .social-link__image {
+    box-shadow: 0 0 10px 0 transparentize($dark-colour, 0.6);
+}
+
+.social-link__text {
+    display: inline-block;
+    color: $dark-colour;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    margin: 10px 0;
+}
+.social-link:hover .social-link__text,
+.social-link:focus .social-link__text {
+    text-decoration: underline;
+}
+
+.social-link--linkedin:hover .social-link__image,
+.social-link--linkedin:focus .social-link__image {
+    background-color: $linkedin-colour;
+}
+
+.social-link--linkedin:hover .social-link__text,
+.social-link--linkedin:focus .social-link__text {
+    color: $linkedin-colour;
+}
+
+.social-link--github .social-link__image {
+    border-radius: 50%;
+}
+
+.social-link--github:hover .social-link__image,
+.social-link--github:focus .social-link__image {
+    background-color: $github-colour;
+}
+
+.social-link--github:hover .social-link__text,
+.social-link--github:focus .social-link__text {
+    color: $github-colour;
+}
+
+.social-link--instagram:hover .social-link__text ,
+.social-link--instagram:focus .social-link__text {
+    color: $instagram-purple-colour;
+}
+
+// Based on styling from https://codepen.io/anon/pen/xdXNjw
+.social-link--instagram .social-link__image {
+    display: inline-block;
+    position: relative;
+    background: #000000;
+    vertical-align: middle;
+}
+
+.social-link--instagram:hover .social-link__image,
+.social-link--instagram:focus .social-link__image {
+    background: radial-gradient(
+            circle farthest-corner at 32% 106%,
+            #ffe17d 0%,
+            #ffcd69 10%,
+            #fa9137 28%,
+            #eb4141 42%,
+            transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+    box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.4);
+}
+
+.social-link--instagram .social-link__image i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.social-link--instagram .social-link__image i::before {
+    content: "\00a0";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.social-link--instagram .social-link__image i::after {
+    content: "\00a0";
+    position: absolute;
+    background: #ffffff;
+}
+
+.social-link--instagram .social-link__image {
+    @include insta-logo(40);
+}
+
+.social-link--facebook .social-link__image {
+    border-radius: 5px;
+}
+
+.social-link--facebook:hover .social-link__text,
+.social-link--facebook:focus .social-link__text {
+    color: $facebook-colour;
+}
+
+.social-link--facebook:hover .social-link__image,
+.social-link--facebook:focus .social-link__image {
+    background: $facebook-colour;
+}
+
+.social-link--twitter .social-link__image {
+    border-radius: 50%;
+}
+
+.social-link--twitter:hover .social-link__text,
+.social-link--twitter:focus .social-link__text {
+    color: $twitter-colour;
+}
+
+.social-link--twitter:hover .social-link__image,
+.social-link--twitter:focus .social-link__image {
+    background: $twitter-colour;
+}
+
+.social-link--snapchat {
+    max-width: 200px;
+    margin: auto;
+}
+
+.social-link--snapchat .social-link__image {
+    width: 100%;
+    height: auto;
+    border-radius: 15%;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.social-link--snapchat:hover .social-link__image,
+.social-link--snapchat:focus .social-link__image {
+    box-shadow: 0 0 10px 0 transparentize($dark-colour, 0.6);
+    filter: grayscale(0);
+}
+
+.social-link--snapchat .social-link__text {
+    padding: 4px;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.social-link--snapchat:hover .social-link__text,
+.social-link--snapchat:focus .social-link__text {
+    color: $snapchat-colour;
+    text-decoration: none;
+}
+
+/* Only for Desktops */
+@media only screen and (min-width: $desktop-width) {
+    .page__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1170px;
+    }
+
+    .social-link {
+        display: inline-block;
+    }
+
+    .social-link--snapchat {
+        width: calc(33% - 10px);
+        max-width: 200px;
+        margin: 5px;
+
+        .social-link__image {
+            max-width: 200px;
+            height: auto;
+        }
+    }
+
+    .social-link__image {
+        height: 50px;
+    }
+
+    .social-link--instagram .social-link__image {
+        @include insta-logo(50);
+    }
+}
