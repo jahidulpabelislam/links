@@ -97,8 +97,8 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
             <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
         <?php } ?>
         <script type="application/javascript">
-            jQuery(document).on("ready", function() {
-                new StickyFooter(".page");
+            jQuery(function() {
+                jQuery(".page").adjustHeightForScreen();
             });
         </script>
     </body>
