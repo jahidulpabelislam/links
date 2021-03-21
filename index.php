@@ -1,5 +1,7 @@
 <?php
 include_once __DIR__ . "/functions.php";
+
+$isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "0");
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +54,11 @@ include_once __DIR__ . "/functions.php";
         <meta name="msapplication-config" content="<?php asset("/assets/favicons/browserconfig.xml"); ?>" />
         <meta name="theme-color" content="#f5f5f5" />
 
-        <link href="<?php asset("/assets/css/main.min.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
+        <?php if ($isDev) { ?>
+            <link href="<?php asset("/assets/css/main.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
+        <?php } else { ?>
+            <link href="<?php asset("/assets/css/main.min.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
+        <?php } ?>
     </head>
 
     <body>
@@ -95,7 +101,11 @@ include_once __DIR__ . "/functions.php";
             </div>
         </main>
 
-        <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
+        <?php if ($isDev) { ?>
+            <script src="<?php asset("/assets/js/main.js"); ?>" type="application/javascript"></script>
+        <?php } else { ?>
+            <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
+        <?php } ?>
         <script type="application/javascript">
             jQuery(document).on("ready", function() {
                 new StickyFooter(".page");
