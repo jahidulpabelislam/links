@@ -3,7 +3,7 @@ include_once __DIR__ . "/functions.php";
 
 $environment = getenv("APPLICATION_ENV") ?? "local";
 
-$liveDomain = "https://links.jahidulpabelislam.com";
+$liveDomain = "https://links.jahidulpabelislam.dev";
 
 $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "0");
 ?>
