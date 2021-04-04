@@ -83,8 +83,8 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
                     ],
                     "instagram" => [
                         "name" => "Instagram",
-                        "username" => "jahidulpabelislam.dev",
-                        "url" => "https://instagram.com/jahidulpabelislam.dev/",
+                        "username" => "jahidulpabelislam",
+                        "url" => "https://instagram.com/jahidulpabelislam/",
                     ],
                     "npm" => [
                         "name" => "NPM",
