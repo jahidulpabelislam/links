@@ -75,7 +75,7 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
                 $items = [
                     "linkedin" => [
                         "name" => "LinkedIn",
-                        "url" => "https://uk.linkedin.com/in/jahidulpabelislam/",
+                        "url" => "https://www.linkedin.com/in/jahidulpabelislam/",
                     ],
                     "github" => [
                         "name" => "GitHub",
