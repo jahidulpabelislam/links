@@ -82,7 +82,6 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
                         "url" => "https://github.com/jahidulpabelislam/",
                     ],
                     "instagram" => [
-                        "name" => "Instagram",
                         "url" => "https://instagram.com/jahidulpabelislam/",
                     ],
                     "npm" => [
@@ -91,23 +90,22 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
                         "url" => "https://www.npmjs.com/~jahidulpabelislam",
                     ],
                     "packagist" => [
-                        "name" => "Packagist",
                         "icon" => "packagist.png",
                         "url" => "https://packagist.org/users/jahidulpabelislam/packages/",
                     ],
                 ];
 
                 foreach ($items as $type => $item) {
-                    $name = $item["name"] ?? $type;
+                    $name = $item["name"] ?? ucwords($type);
                     $username = $item["username"] ?? $defaultUsername;
-                    $icon = $item["icon"] ?? $type . ".svg";
+                    $icon = $item["icon"] ?? "$type.svg";
                     ?>
-                    <a class="social-link social-link--<?php echo $type ?>" href="<?php echo $item["url"] ?>" target="_blank" rel="noopener noreferrer">
+                    <a class="social-link social-link--<?php echo $type; ?>" href="<?php echo $item["url"]; ?>" target="_blank" rel="noopener noreferrer">
                         <?php
                         if ($type === "instagram") { ?>
                             <span class="social-link__image"><i></i></span>
                         <?php } else { ?>
-                            <img class="social-link__image" src="<?php asset("/assets/images/" . $icon); ?>" alt="Find me on <?php echo "$name $username" ?>" />
+                            <img class="social-link__image" src="<?php asset("/assets/images/" . $icon); ?>" alt="Find me on <?php echo "$name $username"; ?>" />
                         <?php } ?>
 
                         &nbsp;<p class="social-link__text"><?php echo $username; ?></p>
