@@ -16,7 +16,8 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
 <html lang="en-GB">
     <head>
         <?php
-        if ($isProduction) { ?>
+        if ($isProduction) {
+            ?>
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-46ZL6G6SEK"></script>
             <script>
@@ -25,7 +26,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                 gtag('js', new Date());
                 gtag('config', 'G-46ZL6G6SEK');
             </script>
-        <?
+            <?php
         }
         ?>
 
