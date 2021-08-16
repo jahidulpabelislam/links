@@ -6,6 +6,8 @@ $environment = getenv("APPLICATION_ENV") ?? "local";
 $liveDomain = "https://links.jahidulpabelislam.com";
 
 $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "0");
+
+$referer = $_SERVER["HTTP_REFERER"] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -102,6 +104,9 @@ $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "
                 ];
 
                 foreach ($items as $type => $item) {
+                    if ($referer && strpos($referer, $type) !== false) {
+                        continue;
+                    }
                     $name = $item["name"] ?? ucwords($type);
                     $username = $item["username"] ?? $defaultUsername;
                     $icon = $item["icon"] ?? "$type.svg";
