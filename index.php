@@ -39,11 +39,8 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="<?php echo $title; ?>" />
 
-        <?php if ($environment === "production") { ?>
-            <link rel="canonical" href="<?php echo $liveDomain ?>" />
-        <?php } else { ?>
-            <meta name="robots" content="noindex,nofollow" />
-        <?php } ?>
+        <link rel="canonical" href="<?php echo $liveDomain ?>" />
+        <meta name="robots" content="noindex" />
 
         <link rel="apple-touch-icon" sizes="57x57" href="<?php asset("/assets/favicons/apple-touch-icon-57x57.png"); ?>" />
         <link rel="apple-touch-icon" sizes="60x60" href="<?php asset("/assets/favicons/apple-touch-icon-60x60.png"); ?>" />
