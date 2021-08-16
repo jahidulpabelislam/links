@@ -1,15 +1,9 @@
 /* For all devices */
 .page {
     display: flex;
-    transition: all 1s ease-in-out;
-    margin-bottom: 0;
-}
-
-.page__inner {
-    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 15px;
-    margin: auto;
-    transition: all 1s ease-in-out;
 }
 
 .social-link {
@@ -47,6 +41,25 @@
     font-weight: 700;
     transition: all 0.3s ease-in-out;
     margin: 10px 0;
+}
+
+.social-link--logo {
+    img {
+        border-radius: 50%;
+        border: 1px solid transparent;
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            background: $primary-colour;
+            border-color: $primary-colour;
+        }
+
+        .social-link__text {
+            color: $linkedin-colour;
+        }
+    }
 }
 
 .social-link--linkedin:hover,
@@ -232,11 +245,12 @@
 
 /* Only for Desktops */
 @media only screen and (min-width: $desktop-width) {
-    .page__inner {
+    .page__socials {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 1170px;
+        margin: 0 auto;
     }
 
     .social-link {
