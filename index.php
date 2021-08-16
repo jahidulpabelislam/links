@@ -3,6 +3,8 @@ include_once __DIR__ . "/functions.php";
 
 $environment = getenv("APPLICATION_ENV") ?? "local";
 
+$isProduction = $environment === "production";
+
 $liveDomain = "https://links.jahidulpabelislam.com";
 
 $isDev = isset($_GET["dev"]) && !($_GET["dev"] === "false" || $_GET["dev"] === "0");
@@ -13,6 +15,20 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
+        <?php
+        if ($isProduction) { ?>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-46ZL6G6SEK"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-46ZL6G6SEK');
+            </script>
+        <?
+        }
+        ?>
+
         <?php
         $title = "Links | Jahidul Pabel Islam - Full Stack Developer";
         $description = "Links for Jahidul Pabel Islam, a Full Stack Developer in Web &amp; Software based at Bognor Regis, West Sussex down by the South Coast of England.";
