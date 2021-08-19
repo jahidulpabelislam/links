@@ -86,7 +86,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
     <body>
         <main class="page">
             <div class="page__header">
-                <a class="social-link social-link--logo" href="https://jahidulpabelislam.com/">
+                <a class="social-link social-link--logo" href="https://linkto.jahidulpabelislam.com/site/">
                     <img class="social-link__image social-link__image--logo" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
                     &nbsp;<p class="social-link__text">jahidulpabelislam.com</p>
                 </a>
@@ -97,23 +97,17 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                 $items = [
                     "linkedin" => [
                         "name" => "LinkedIn",
-                        "url" => "https://www.linkedin.com/in/jahidulpabelislam/",
                     ],
                     "github" => [
                         "name" => "GitHub",
-                        "url" => "https://github.com/jahidulpabelislam/",
                     ],
-                    "instagram" => [
-                        "url" => "https://instagram.com/jahidulpabelislam/",
-                    ],
+                    "instagram" => [],
                     "npm" => [
                         "name" => "NPM",
                         "icon" => "npm.png",
-                        "url" => "https://www.npmjs.com/~jahidulpabelislam",
                     ],
                     "packagist" => [
                         "icon" => "packagist.png",
-                        "url" => "https://packagist.org/users/jahidulpabelislam/packages/",
                     ],
                 ];
 
@@ -125,7 +119,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     $username = $item["username"] ?? $defaultUsername;
                     $icon = $item["icon"] ?? "$type.svg";
                     ?>
-                    <a class="social-link social-link--<?php echo $type; ?>" href="<?php echo $item["url"]; ?>" target="_blank" rel="noopener noreferrer">
+                    <a class="social-link social-link--<?php echo $type; ?>" href="https://linkto.jahidulpabelislam.com/<?php echo $type; ?>/" target="_blank" rel="noopener noreferrer">
                         <?php
                         if ($type === "instagram") { ?>
                             <span class="social-link__image"><i></i></span>
