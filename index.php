@@ -85,12 +85,19 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
 
     <body>
         <main class="page">
-            <div class="page__header">
-                <a class="social-link social-link--logo" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
-                    <img class="social-link__image social-link__image--logo" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
-                    &nbsp;<p class="social-link__text">jahidulpabelislam.com</p>
-                </a>
-            </div>
+            <?php
+            if (!$referer || strpos($referer, "jahidulpabelislam.com") === false) {
+                ?>
+                <div class="page__header">
+                    <a class="social-link social-link--logo" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
+                        <img class="social-link__image social-link__image--logo" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
+                        &nbsp;<p class="social-link__text">jahidulpabelislam.com</p>
+                    </a>
+                </div>
+                <?php
+            }
+            ?>
+
             <div class="page__socials">
                 <?php
                 $defaultUsername = "jahidulpabelislam";
