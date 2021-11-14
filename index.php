@@ -106,9 +106,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                         "name" => "NPM",
                         "icon" => "npm.png",
                     ],
-                    "packagist" => [
-                        "icon" => "packagist.png",
-                    ],
+                    "packagist" => [],
                 ];
 
                 foreach ($items as $type => $item) {

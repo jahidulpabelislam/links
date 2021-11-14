@@ -32,7 +32,7 @@
     height: 40px;
     background-color: #000000;
     vertical-align: middle;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .social-link__text {
@@ -228,7 +228,7 @@
     &:hover,
     &:focus {
         .social-link__image {
-            filter: none;
+            background-color: $packagist-colour;
         }
 
         .social-link__text {
@@ -237,9 +237,7 @@
     }
 
     .social-link__image {
-        background-color: transparent;
         border-radius: 50%;
-        filter: grayscale(100%);
     }
 }
 
