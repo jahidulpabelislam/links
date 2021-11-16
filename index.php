@@ -111,7 +111,6 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     "instagram" => [],
                     "npm" => [
                         "name" => "NPM",
-                        "icon" => "npm.png",
                     ],
                     "packagist" => [],
                 ];
