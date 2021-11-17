@@ -3,6 +3,10 @@
     width: #{$size}px;
     border-radius: #{$size * 0.222}px;
 
+    &::before {
+        border-radius: #{$size * 0.222}px;
+    }
+
     i {
         width: #{$size * 0.736}px;
         height: #{$size * 0.736}px;

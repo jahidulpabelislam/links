@@ -158,8 +158,9 @@ body {
   border-radius: 50%; }
 
 .social-link--instagram:hover .social-link__image, .social-link--instagram:focus .social-link__image {
-  background: radial-gradient(circle farthest-corner at 32% 106%, #ffe17d 0%, #ffcd69 10%, #fa9137 28%, #eb4141 42%, transparent 82%), linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
   box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.4); }
+  .social-link--instagram:hover .social-link__image::before, .social-link--instagram:focus .social-link__image::before {
+    opacity: 1; }
 
 .social-link--instagram:hover .social-link__text, .social-link--instagram:focus .social-link__text {
   color: #8a3ab9; }
@@ -171,8 +172,9 @@ body {
   border-radius: 8.88px;
   display: inline-block;
   position: relative;
-  background: #000000;
   vertical-align: middle; }
+  .social-link--instagram .social-link__image::before {
+    border-radius: 8.88px; }
   .social-link--instagram .social-link__image i {
     width: 29.44px;
     height: 29.44px;
@@ -189,6 +191,16 @@ body {
     width: 3.6px;
     height: 3.6px;
     border-radius: 1.76px; }
+  .social-link--instagram .social-link__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle farthest-corner at 32% 106%, #ffe17d 0%, #ffcd69 10%, #fa9137 28%, #eb4141 42%, transparent 82%), linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; }
   .social-link--instagram .social-link__image i {
     position: absolute;
     top: 0;
@@ -245,6 +257,8 @@ body {
   .social-link--instagram .social-link__image {
     width: 50px;
     border-radius: 11.1px; }
+    .social-link--instagram .social-link__image::before {
+      border-radius: 11.1px; }
     .social-link--instagram .social-link__image i {
       width: 36.8px;
       height: 36.8px;
