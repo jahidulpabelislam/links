@@ -6,12 +6,8 @@
 }
 
 .social-link {
-    color: inherit;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-
     display: block;
+    text-decoration: none;
     margin: 5px;
     padding: 15px;
 
@@ -102,7 +98,6 @@
                     transparent 82%
             ),
             linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
-            box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.4);
         }
 
         .social-link__text {
@@ -115,8 +110,6 @@
 
         display: inline-block;
         position: relative;
-        background: #000000;
-        vertical-align: middle;
 
         i {
             position: absolute;
