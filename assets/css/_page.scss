@@ -22,7 +22,9 @@
         }
 
         .social-link__text {
-            text-decoration: underline;
+            &::after {
+                width: calc(100% - 16px);
+            }
         }
     }
 }
@@ -35,11 +37,24 @@
 }
 
 .social-link__text {
+    position: relative;
     display: inline-block;
     color: $dark-colour;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
     margin: 10px 0;
+    padding: 0 0 3px;
+
+    &::after {
+        content: "\00a0";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
 }
 
 .social-link--logo {
@@ -57,6 +72,10 @@
 
         .social-link__text {
             color: $primary-colour;
+
+            &::after {
+                background: $primary-colour;
+            }
         }
     }
 }
@@ -69,6 +88,10 @@
 
     .social-link__text {
         color: $linkedin-colour;
+
+        &::after {
+            background: $linkedin-colour;
+        }
     }
 }
 
@@ -81,6 +104,10 @@
 
         .social-link__text {
             color: $github-colour;
+
+            &::after {
+                background: $github-colour;
+            }
         }
     }
 
@@ -107,6 +134,10 @@
 
         .social-link__text {
             color: $instagram-purple-colour;
+
+            &::after {
+                background: $instagram-purple-colour;
+            }
         }
     }
 
@@ -153,6 +184,10 @@
 
     .social-link__text {
         color: $npm-colour;
+
+        &::after {
+            background: $npm-colour;
+        }
     }
 }
 
@@ -165,6 +200,10 @@
 
         .social-link__text {
             color: $packagist-colour;
+
+            &::after {
+                background: $packagist-colour;
+            }
         }
     }
 

@@ -95,8 +95,8 @@ body {
   padding: 15px; }
   .social-link:hover .social-link__image, .social-link:focus .social-link__image {
     box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.4); }
-  .social-link:hover .social-link__text, .social-link:focus .social-link__text {
-    text-decoration: underline; }
+  .social-link:hover .social-link__text::after, .social-link:focus .social-link__text::after {
+    width: calc(100% - 16px); }
 
 .social-link__image {
   height: 40px;
@@ -105,11 +105,22 @@ body {
   transition: background-color 0.3s ease-in-out; }
 
 .social-link__text {
+  position: relative;
   display: inline-block;
   color: #333333;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
-  margin: 10px 0; }
+  margin: 10px 0;
+  padding: 0 0 3px; }
+  .social-link__text::after {
+    content: "\00a0";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%); }
 
 .social-link--logo img {
   border-radius: 50%;
@@ -121,6 +132,8 @@ body {
 
 .social-link--logo:hover .social-link__text, .social-link--logo:focus .social-link__text {
   color: #0375b4; }
+  .social-link--logo:hover .social-link__text::after, .social-link--logo:focus .social-link__text::after {
+    background: #0375b4; }
 
 .social-link--linkedin:hover .social-link__image,
 .social-link--linkedin:focus .social-link__image {
@@ -129,12 +142,17 @@ body {
 .social-link--linkedin:hover .social-link__text,
 .social-link--linkedin:focus .social-link__text {
   color: #007bb5; }
+  .social-link--linkedin:hover .social-link__text::after,
+  .social-link--linkedin:focus .social-link__text::after {
+    background: #007bb5; }
 
 .social-link--github:hover .social-link__image, .social-link--github:focus .social-link__image {
   background-color: #0f7c10; }
 
 .social-link--github:hover .social-link__text, .social-link--github:focus .social-link__text {
   color: #0f7c10; }
+  .social-link--github:hover .social-link__text::after, .social-link--github:focus .social-link__text::after {
+    background: #0f7c10; }
 
 .social-link--github .social-link__image {
   border-radius: 50%; }
@@ -145,6 +163,8 @@ body {
 
 .social-link--instagram:hover .social-link__text, .social-link--instagram:focus .social-link__text {
   color: #8a3ab9; }
+  .social-link--instagram:hover .social-link__text::after, .social-link--instagram:focus .social-link__text::after {
+    background: #8a3ab9; }
 
 .social-link--instagram .social-link__image {
   width: 40px;
@@ -196,12 +216,17 @@ body {
 .social-link--npm:hover .social-link__text,
 .social-link--npm:focus .social-link__text {
   color: #cb3837; }
+  .social-link--npm:hover .social-link__text::after,
+  .social-link--npm:focus .social-link__text::after {
+    background: #cb3837; }
 
 .social-link--packagist:hover .social-link__image, .social-link--packagist:focus .social-link__image {
   background-color: #f28d1a; }
 
 .social-link--packagist:hover .social-link__text, .social-link--packagist:focus .social-link__text {
   color: #f28d1a; }
+  .social-link--packagist:hover .social-link__text::after, .social-link--packagist:focus .social-link__text::after {
+    background: #f28d1a; }
 
 .social-link--packagist .social-link__image {
   border-radius: 50%; }
