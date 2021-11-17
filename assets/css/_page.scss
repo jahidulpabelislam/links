@@ -54,7 +54,8 @@
 }
 
 .social-link--logo {
-    img {
+    .social-link__image {
+        transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
         border-radius: 50%;
         border: 1px solid transparent;
     }
