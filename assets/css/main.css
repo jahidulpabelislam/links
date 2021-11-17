@@ -79,7 +79,6 @@ body {
     font-size: 16px;
     line-height: 21px; } }
 
-/* For all devices */
 .page {
   display: flex;
   flex-direction: column;
@@ -190,45 +189,6 @@ body {
     position: absolute;
     background: #ffffff; }
 
-.social-link--facebook:hover .social-link__image, .social-link--facebook:focus .social-link__image {
-  background: #3b5998; }
-
-.social-link--facebook:hover .social-link__text, .social-link--facebook:focus .social-link__text {
-  color: #3b5998; }
-
-.social-link--facebook .social-link__image {
-  border-radius: 5px; }
-
-.social-link--twitter:hover .social-link__image, .social-link--twitter:focus .social-link__image {
-  background: #55acee; }
-
-.social-link--twitter:hover .social-link__text, .social-link--twitter:focus .social-link__text {
-  color: #55acee; }
-
-.social-link--twitter .social-link__image {
-  border-radius: 50%; }
-
-.social-link--snapchat {
-  max-width: 200px;
-  margin: auto; }
-  .social-link--snapchat:hover .social-link__image, .social-link--snapchat:focus .social-link__image {
-    box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.4);
-    filter: grayscale(0); }
-  .social-link--snapchat:hover .social-link__text, .social-link--snapchat:focus .social-link__text {
-    color: #fffc00;
-    text-decoration: none; }
-  .social-link--snapchat .social-link__image {
-    width: 100%;
-    height: auto;
-    border-radius: 15%;
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in-out; }
-  .social-link--snapchat .social-link__text {
-    padding: 4px;
-    border-radius: 6px;
-    background-color: #000000;
-    color: #ffffff; }
-
 .social-link--npm:hover .social-link__image,
 .social-link--npm:focus .social-link__image {
   background-color: #cb3837; }
@@ -246,7 +206,6 @@ body {
 .social-link--packagist .social-link__image {
   border-radius: 50%; }
 
-/* Only for Desktops */
 @media only screen and (min-width: 1200px) {
   .page__socials {
     display: flex;
@@ -258,13 +217,6 @@ body {
     display: inline-block; }
   .social-link__image {
     height: 50px; }
-  .social-link--snapchat {
-    width: calc(33% - 10px);
-    max-width: 200px;
-    margin: 5px; }
-    .social-link--snapchat .social-link__image {
-      max-width: 200px;
-      height: auto; }
   .social-link--instagram .social-link__image {
     width: 50px;
     border-radius: 11.1px; }

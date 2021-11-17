@@ -1,4 +1,3 @@
-/* For all devices */
 .page {
     display: flex;
     flex-direction: column;
@@ -146,73 +145,6 @@
     }
 }
 
-.social-link--facebook {
-    &:hover,
-    &:focus {
-        .social-link__image {
-            background: $facebook-colour;
-        }
-
-        .social-link__text {
-            color: $facebook-colour;
-        }
-    }
-
-    .social-link__image {
-        border-radius: 5px;
-    }
-}
-
-.social-link--twitter {
-    &:hover,
-    &:focus {
-        .social-link__image {
-            background: $twitter-colour;
-        }
-
-        .social-link__text {
-            color: $twitter-colour;
-        }
-    }
-
-    .social-link__image {
-        border-radius: 50%;
-    }
-}
-
-.social-link--snapchat {
-    max-width: 200px;
-    margin: auto;
-
-    &:hover,
-    &:focus {
-        .social-link__image {
-            box-shadow: 0 0 10px 0 transparentize($dark-colour, 0.6);
-            filter: grayscale(0);
-        }
-
-        .social-link__text {
-            color: $snapchat-colour;
-            text-decoration: none;
-        }
-    }
-
-    .social-link__image {
-        width: 100%;
-        height: auto;
-        border-radius: 15%;
-        filter: grayscale(100%);
-        transition: all 0.3s ease-in-out;
-    }
-
-    .social-link__text {
-        padding: 4px;
-        border-radius: 6px;
-        background-color: #000000;
-        color: #ffffff;
-    }
-}
-
 .social-link--npm:hover,
 .social-link--npm:focus {
     .social-link__image {
@@ -241,7 +173,6 @@
     }
 }
 
-/* Only for Desktops */
 @media only screen and (min-width: $desktop-width) {
     .page__socials {
         display: flex;
@@ -257,17 +188,6 @@
 
     .social-link__image {
         height: 50px;
-    }
-
-    .social-link--snapchat {
-        width: calc(33% - 10px);
-        max-width: 200px;
-        margin: 5px;
-
-        .social-link__image {
-            max-width: 200px;
-            height: auto;
-        }
     }
 
     .social-link--instagram {
