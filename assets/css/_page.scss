@@ -235,6 +235,18 @@
     }
 }
 
+@media only screen and (min-width: $tablet-width) {
+    .link-item__image {
+        height: 50px;
+    }
+
+    .link-item--instagram {
+        .link-item__image {
+            @include insta-logo(50);
+        }
+    }
+}
+
 @media only screen and (min-width: $desktop-width) {
     .page__links {
         display: flex;
@@ -249,12 +261,12 @@
     }
 
     .link-item__image {
-        height: 50px;
+        height: 60px;
     }
 
     .link-item--instagram {
         .link-item__image {
-            @include insta-logo(50);
+            @include insta-logo(60);
         }
     }
 }
