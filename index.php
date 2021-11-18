@@ -86,12 +86,14 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
     <body>
         <main class="page">
             <div class="page__header">
-                <a class="social-link social-link--logo" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
-                    <img class="social-link__image social-link__image--logo" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
-                    &nbsp;<p class="social-link__text">jahidulpabelislam.com</p>
-                </a>
+                <div class="link-item link-item--site">
+                    <a class="link-item__link" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
+                        <img class="link-item__image" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
+                        &nbsp;<p class="link-item__text">jahidulpabelislam.com</p>
+                    </a>
+                </div>
             </div>
-            <div class="page__socials">
+            <div class="page__links">
                 <?php
                 $defaultUsername = "jahidulpabelislam";
                 $items = [
@@ -116,16 +118,27 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     $username = $item["username"] ?? $defaultUsername;
                     $icon = $item["icon"] ?? "$type.svg";
                     ?>
-                    <a class="social-link social-link--<?php echo $type; ?>" href="https://linkto.jahidulpabelislam.com/<?php echo $type; ?>/" target="_blank" rel="noopener noreferrer">
-                        <?php
-                        if ($type === "instagram") { ?>
-                            <span class="social-link__image"><i></i></span>
-                        <?php } else { ?>
-                            <img class="social-link__image" src="<?php asset("/assets/images/" . $icon); ?>" alt="Find me on <?php echo "$name $username"; ?>" />
-                        <?php } ?>
+                    <div class="link-item link-item--<?php echo $type; ?>">
+                        <a
+                            class="link-item__link"
+                            href="https://linkto.jahidulpabelislam.com/<?php echo $type; ?>/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <?php
+                            if ($type === "instagram") { ?>
+                                <span class="link-item__image"><i></i></span>
+                            <?php } else { ?>
+                                <img
+                                    class="link-item__image"
+                                    src="<?php asset("/assets/images/" . $icon); ?>"
+                                    alt="Find me on <?php echo "$name $username"; ?>"
+                                />
+                            <?php } ?>
 
-                        &nbsp;<p class="social-link__text"><?php echo $username; ?></p>
-                    </a>
+                            &nbsp;<p class="link-item__text"><?php echo $username; ?></p>
+                        </a>
+                    </div>
                 <?php } ?>
             </div>
         </main>

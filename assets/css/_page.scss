@@ -5,19 +5,23 @@
     padding: 0 15px;
 }
 
-.social-link {
+.link-item {
     display: block;
-    text-decoration: none;
     margin: 5px;
     padding: 15px;
+}
+
+.link-item__link {
+    display: inline-block;
+    text-decoration: none;
 
     &:hover,
     &:focus {
-        .social-link__image {
+        .link-item__image {
             box-shadow: 0 0 10px 0 transparentize($dark-colour, 0.6);
         }
 
-        .social-link__text {
+        .link-item__text {
             &::after {
                 width: calc(100% - 16px);
             }
@@ -25,14 +29,14 @@
     }
 }
 
-.social-link__image {
+.link-item__image {
     height: 40px;
     background-color: #000000;
     vertical-align: middle;
     transition: all 0.3s ease-in-out;
 }
 
-.social-link__text {
+.link-item__text {
     position: relative;
     display: inline-block;
     color: $dark-colour;
@@ -53,20 +57,22 @@
     }
 }
 
-.social-link--logo {
-    .social-link__image {
+.link-item--site {
+    .link-item__image {
         border-radius: 50%;
         border: 1px solid transparent;
     }
+}
 
+.link-item--site .link-item__link {
     &:hover,
     &:focus {
-        img {
+        .link-item__image {
             background: $primary-colour;
             border-color: $primary-colour;
         }
 
-        .social-link__text {
+        .link-item__text {
             color: $primary-colour;
 
             &::after {
@@ -76,29 +82,37 @@
     }
 }
 
-.social-link--linkedin:hover,
-.social-link--linkedin:focus {
-    .social-link__image {
-        background-color: $linkedin-colour;
-    }
+.link-item--linkedin .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background-color: $linkedin-colour;
+        }
 
-    .social-link__text {
-        color: $linkedin-colour;
+        .link-item__text {
+            color: $linkedin-colour;
 
-        &::after {
-            background: $linkedin-colour;
+            &::after {
+                background: $linkedin-colour;
+            }
         }
     }
 }
 
-.social-link--github {
+.link-item--github {
+    .link-item__image {
+        border-radius: 50%;
+    }
+}
+
+.link-item--github .link-item__link {
     &:hover,
     &:focus {
-        .social-link__image {
+        .link-item__image {
             background-color: $github-colour;
         }
 
-        .social-link__text {
+        .link-item__text {
             color: $github-colour;
 
             &::after {
@@ -106,22 +120,18 @@
             }
         }
     }
-
-    .social-link__image {
-        border-radius: 50%;
-    }
 }
 
-.social-link--instagram {
+.link-item--instagram .link-item__link {
     &:hover ,
     &:focus {
-        .social-link__image {
+        .link-item__image {
             &::before {
                 opacity: 1;
             }
         }
 
-        .social-link__text {
+        .link-item__text {
             color: $instagram-purple-colour;
 
             &::after {
@@ -129,8 +139,10 @@
             }
         }
     }
+}
 
-    .social-link__image {
+.link-item--instagram {
+    .link-item__image {
         @include insta-logo(40);
 
         display: inline-block;
@@ -183,29 +195,31 @@
     }
 }
 
-.social-link--npm:hover,
-.social-link--npm:focus {
-    .social-link__image {
-        background-color: $npm-colour;
-    }
+.link-item--npm .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background-color: $npm-colour;
+        }
 
-    .social-link__text {
-        color: $npm-colour;
+        .link-item__text {
+            color: $npm-colour;
 
-        &::after {
-            background: $npm-colour;
+            &::after {
+                background: $npm-colour;
+            }
         }
     }
 }
 
-.social-link--packagist {
+.link-item--packagist .link-item__link {
     &:hover,
     &:focus {
-        .social-link__image {
+        .link-item__image {
             background-color: $packagist-colour;
         }
 
-        .social-link__text {
+        .link-item__text {
             color: $packagist-colour;
 
             &::after {
@@ -213,14 +227,16 @@
             }
         }
     }
+}
 
-    .social-link__image {
+.link-item--packagist {
+    .link-item__image {
         border-radius: 50%;
     }
 }
 
 @media only screen and (min-width: $desktop-width) {
-    .page__socials {
+    .page__links {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -228,16 +244,16 @@
         margin: 0 auto;
     }
 
-    .social-link {
+    .link-item {
         display: inline-block;
     }
 
-    .social-link__image {
+    .link-item__image {
         height: 50px;
     }
 
-    .social-link--instagram {
-        .social-link__image {
+    .link-item--instagram {
+        .link-item__image {
             @include insta-logo(50);
         }
     }
