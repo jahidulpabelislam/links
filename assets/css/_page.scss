@@ -29,7 +29,7 @@
     height: 40px;
     background-color: #000000;
     vertical-align: middle;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .social-link__text {
@@ -55,7 +55,6 @@
 
 .social-link--logo {
     .social-link__image {
-        transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
         border-radius: 50%;
         border: 1px solid transparent;
     }
