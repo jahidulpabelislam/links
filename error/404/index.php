@@ -32,7 +32,7 @@ include_once __DIR__ . "/../../functions.php";
 
     <body>
         <main class="page">
-            <p class="error">Hmm... Not Sure What You Are Looking For, But My Link Are <a href="/">Here</a>.</p>
+            <p class="error">Hmm... Not Sure What You Are Looking For, But My Links Are <a href="/">Here</a>.</p>
         </main>
 
         <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
