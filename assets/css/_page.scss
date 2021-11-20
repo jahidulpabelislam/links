@@ -42,7 +42,6 @@
     color: $dark-colour;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
-    margin: 10px 0;
     padding: 0 0 4px;
 
     &::after {
@@ -262,6 +261,10 @@
 
     .link-item__image {
         height: 60px;
+    }
+
+    .link-item__link {
+        margin: 10px 0;
     }
 
     .link-item--instagram {
