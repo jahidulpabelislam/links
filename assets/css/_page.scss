@@ -42,7 +42,7 @@
     color: $dark-colour;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
-    padding: 0 0 4px;
+    padding: 0 0 3px;
 
     &::after {
         content: "\00a0";
@@ -271,5 +271,9 @@
         .link-item__image {
             @include insta-logo(60);
         }
+    }
+
+    .link-item__text {
+        padding-bottom: 4px;
     }
 }

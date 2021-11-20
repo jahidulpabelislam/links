@@ -110,7 +110,7 @@ body {
   color: #333333;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
-  padding: 0 0 4px; }
+  padding: 0 0 3px; }
   .link-item__text::after {
     content: "\00a0";
     position: absolute;
@@ -291,4 +291,6 @@ body {
       right: 3.6px;
       width: 5.4px;
       height: 5.4px;
-      border-radius: 2.64px; } }
+      border-radius: 2.64px; }
+  .link-item__text {
+    padding-bottom: 4px; } }
