@@ -103,11 +103,11 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     "github" => [
                         "name" => "GitHub",
                     ],
-                    "instagram" => [],
                     "npm" => [
                         "name" => "NPM",
                     ],
                     "packagist" => [],
+                    "instagram" => [],
                 ];
 
                 foreach ($items as $type => $item) {
