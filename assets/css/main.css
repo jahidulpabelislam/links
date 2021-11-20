@@ -269,8 +269,6 @@ body {
     display: inline-block; }
   .link-item__image {
     height: 60px; }
-  .link-item__link {
-    margin: 10px 0; }
   .link-item--instagram .link-item__image {
     width: 60px;
     border-radius: 13.32px; }

@@ -263,10 +263,6 @@
         height: 60px;
     }
 
-    .link-item__link {
-        margin: 10px 0;
-    }
-
     .link-item--instagram {
         .link-item__image {
             @include insta-logo(60);
