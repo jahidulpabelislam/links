@@ -240,8 +240,9 @@
 }
 
 @media only screen and (min-width: $desktop-width) {
-    .page__links {
+    .links {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         width: 1170px;
@@ -250,6 +251,10 @@
 
     .link-item {
         display: inline-block;
+    }
+
+    .link-item--site {
+        width: 100%;
     }
 
     .link-item__image {

@@ -259,14 +259,17 @@ body {
       border-radius: 2.2px; } }
 
 @media only screen and (min-width: 1200px) {
-  .page__links {
+  .links {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 1170px;
     margin: 0 auto; }
   .link-item {
     display: inline-block; }
+  .link-item--site {
+    width: 100%; }
   .link-item__image {
     height: 60px; }
   .link-item--instagram .link-item__image {

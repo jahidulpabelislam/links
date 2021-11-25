@@ -50,18 +50,15 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
 
         <link href="<?php asset("/assets/css/main" . ($isDev ? "" : ".min" ) . ".css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
     </head>
-
     <body>
         <main class="page">
-            <div class="page__header">
+            <div class="links">
                 <div class="link-item link-item--site">
                     <a class="link-item__link" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
                         <img class="link-item__image" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
                         &nbsp;<p class="link-item__text">jahidulpabelislam.com</p>
                     </a>
                 </div>
-            </div>
-            <div class="page__links">
                 <?php
                 $defaultUsername = "jahidulpabelislam";
                 $items = [
