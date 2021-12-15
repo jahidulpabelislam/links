@@ -35,6 +35,6 @@ include_once __DIR__ . "/../../functions.php";
             <p class="error">You Have Found Something Top Secret!</p>
         </main>
 
-        <script src="<?php asset("/assets/js/main.min.js"); ?>" type="application/javascript"></script>
+        <script src="<?php asset("/assets/js/global.min.js"); ?>" type="application/javascript"></script>
     </body>
 </html>

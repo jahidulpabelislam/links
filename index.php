@@ -108,6 +108,6 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
             </div>
         </main>
 
-        <script src="<?php asset("/assets/js/main" . ($isDev ? "" : ".min") . ".js"); ?>" type="application/javascript"></script>
+        <script src="<?php asset("/assets/js/global" . ($isDev ? "" : ".min") . ".js"); ?>" type="application/javascript"></script>
     </body>
 </html>
