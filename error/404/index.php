@@ -11,11 +11,7 @@ include_once __DIR__ . "/../../functions.php";
         }
         ?>
 
-        <?php
-        $title = "Not Found";
-        ?>
-
-        <title><?php echo $title; ?></title>
+        <title>Not Found</title>
 
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
