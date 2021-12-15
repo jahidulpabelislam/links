@@ -28,7 +28,7 @@ include_once __DIR__ . "/../../functions.php";
 
     <body>
         <main class="page">
-            <p class="error">You Have Found Something Top Secret!</p>
+            <p class="error">Shh, You Have Found Something Very Top Secret!</p>
         </main>
 
         <script src="<?php asset("/assets/js/global.min.js"); ?>" type="application/javascript"></script>
