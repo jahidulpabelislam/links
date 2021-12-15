@@ -7,7 +7,7 @@ include_once __DIR__ . "/../../functions.php";
     <head>
         <?php
         if (isProduction()) {
-            include_once __DIR__ . "/ga.php";
+            include_once __DIR__ . "/../../ga.php";
         }
         ?>
 
