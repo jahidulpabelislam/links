@@ -53,12 +53,19 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
     <body>
         <main class="page">
             <div class="links">
-                <div class="link-item link-item--site">
-                    <a class="link-item__link" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
-                        <img class="link-item__image" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
-                        &nbsp;<p class="link-item__text">jahidulpabelislam.com</p>
-                    </a>
-                </div>
+                <?php
+                if (!$referer || strpos($referer, "jahidulpabelislam.com") === false) {
+                    ?>
+                    <div class="link-item link-item--site">
+                        <a class="link-item__link" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
+                            <img class="link-item__image" src="<?php asset("/assets/images/jpi.png"); ?>" alt="Logo" />
+                            &nbsp;<p class="link-item__text">jahidulpabelislam.com</p>
+                        </a>
+                    </div>
+                    <?php
+                }
+                ?>
+
                 <?php
                 $defaultUsername = "jahidulpabelislam";
                 $items = [
