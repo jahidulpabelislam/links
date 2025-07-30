@@ -1,0 +1,13 @@
+{
+    "minimum-stability" : "dev",
+    "require": {
+        "php": "^8.0",
+        "jpi/personal-core": "1.x-dev"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jahidulpabelislam/personal-core"
+        }
+    ]
+}
