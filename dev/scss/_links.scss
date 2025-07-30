@@ -1,0 +1,273 @@
+.link-item {
+    display: block;
+    margin: 5px;
+    padding: 15px;
+}
+
+.link-item__link {
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        .link-item__image {
+            box-shadow: 0 0 10px 0 transparentize($dark-colour, 0.6);
+        }
+
+        .link-item__text {
+            &::after {
+                width: calc(100% - 32px);
+            }
+        }
+    }
+}
+
+.link-item__image {
+    height: 40px;
+    background-color: #000000;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+
+.link-item__text {
+    position: relative;
+    display: inline-block;
+    color: $dark-colour;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    padding: 0 0 3px;
+
+    &::after {
+        content: "\00a0";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+}
+
+.link-item--site {
+    .link-item__image {
+        border-radius: 50%;
+        border: 1px solid transparent;
+    }
+}
+
+.link-item--site .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background: $brand-colour;
+            border-color: $brand-colour;
+        }
+
+        .link-item__text {
+            color: $brand-colour;
+
+            &::after {
+                background: $brand-colour;
+            }
+        }
+    }
+}
+
+.link-item--linkedin .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background-color: $linkedin-colour;
+        }
+
+        .link-item__text {
+            color: $linkedin-colour;
+
+            &::after {
+                background: $linkedin-colour;
+            }
+        }
+    }
+}
+
+.link-item--github {
+    .link-item__image {
+        border-radius: 50%;
+    }
+}
+
+.link-item--github .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background-color: $github-colour;
+        }
+
+        .link-item__text {
+            color: $github-colour;
+
+            &::after {
+                background: $github-colour;
+            }
+        }
+    }
+}
+
+.link-item--instagram .link-item__link {
+    &:hover ,
+    &:focus {
+        .link-item__image {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        .link-item__text {
+            color: $instagram-purple-colour;
+
+            &::after {
+                background: $instagram-purple-colour;
+            }
+        }
+    }
+}
+
+.link-item--instagram {
+    .link-item__image {
+        @include insta-logo(40);
+
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background: radial-gradient(
+                    circle farthest-corner at 32% 106%,
+                    #ffe17d 0%,
+                    #ffcd69 10%,
+                    #fa9137 28%,
+                    #eb4141 42%,
+                    transparent 82%
+            ),
+            linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        i::before {
+            content: "\00a0";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        i::after {
+            content: "\00a0";
+            position: absolute;
+            background: #ffffff;
+        }
+    }
+}
+
+.link-item--npm .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background-color: $npm-colour;
+        }
+
+        .link-item__text {
+            color: $npm-colour;
+
+            &::after {
+                background: $npm-colour;
+            }
+        }
+    }
+}
+
+.link-item--packagist .link-item__link {
+    &:hover,
+    &:focus {
+        .link-item__image {
+            background-color: $packagist-colour;
+        }
+
+        .link-item__text {
+            color: $packagist-colour;
+
+            &::after {
+                background: $packagist-colour;
+            }
+        }
+    }
+}
+
+.link-item--packagist {
+    .link-item__image {
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (min-width: $tablet-width) {
+    .link-item__image {
+        height: 50px;
+    }
+
+    .link-item--instagram {
+        .link-item__image {
+            @include insta-logo(50);
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop-width) {
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 1170px;
+        margin: 0 auto;
+    }
+
+    .link-item {
+        display: inline-block;
+    }
+
+    .link-item--site {
+        width: 100%;
+    }
+
+    .link-item__image {
+        height: 60px;
+    }
+
+    .link-item--instagram {
+        .link-item__image {
+            @include insta-logo(60);
+        }
+    }
+
+    .link-item__text {
+        padding-bottom: 4px;
+    }
+}
