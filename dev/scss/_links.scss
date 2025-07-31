@@ -52,18 +52,14 @@
 .link-item--site {
     .link-item__image {
         border-radius: 50%;
-        border: 1px solid transparent;
+        border: 1px solid $brand-colour;
+        background: #fff;
     }
 }
 
 .link-item--site .link-item__link {
     &:hover,
     &:focus {
-        .link-item__image {
-            background: $brand-colour;
-            border-color: $brand-colour;
-        }
-
         .link-item__text {
             color: $brand-colour;
 
