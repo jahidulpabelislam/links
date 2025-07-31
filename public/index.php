@@ -40,8 +40,6 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
         <link rel="canonical" href="<?php echo $liveDomain ?>" />
         <meta name="robots" content="noindex" />
 
-        <?php echo $site::asset("/assets/css/error.css"); ?>
-
         <?php $site->renderFavicons(); ?>
 
         <link href="<?php echo $site::asset("/assets/css/main.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
