@@ -52,7 +52,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     ?>
                     <div class="link-item link-item--site">
                         <a class="link-item__link" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
-                            <img class="link-item__image" src="<?php echo $site::asset("/logo.png", null,  PUBLIC_ROOT . '../vendor/jpi/personal-core'); ?>" alt="Logo" />
+                            <img class="link-item__image" src="<?php echo $site::asset("/logo.png", null, PUBLIC_ROOT . '../vendor/jpi/personal-core'); ?>" alt="Logo" />
                             &nbsp;<p class="link-item__text">jahidulpabelislam.com</p>
                         </a>
                     </div>
