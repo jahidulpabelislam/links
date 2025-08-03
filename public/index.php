@@ -1,9 +1,14 @@
 <?php
+
+declare(strict_types=1);
+
 include_once __DIR__ . "/../bootstrap.php";
 
-$site = \JPI\Site::get();
+$app = \JPI\App::get();
 
-$liveDomain = "https://links.jahidulpabelislam.com";
+$siteDomain = $app::DOMAINS[$app->getEnvironment()];
+
+$liveDomain = "https://links." . $app::DOMAINS["production"];
 
 $referer = $_SERVER["HTTP_REFERER"] ?? null;
 ?>
@@ -32,7 +37,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
         <meta property="og:url" content="<?php echo $liveDomain ?>" />
         <meta property="og:site_name" content="Jahidul Pabel Islam" />
 
-        <meta property="og:image" content="<?php echo $liveDomain ?><?php echo $site::asset("/assets/images/social-card.png"); ?>" />
+        <meta property="og:image" content="<?php echo $app::asset("/assets/images/social-card.png"); ?>" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="<?php echo $title; ?>" />
@@ -40,19 +45,19 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
         <link rel="canonical" href="<?php echo $liveDomain ?>" />
         <meta name="robots" content="noindex" />
 
-        <?php $site->renderFavicons(); ?>
+        <?php $app->renderFavicons(); ?>
 
-        <link href="<?php echo $site::asset("/assets/css/main.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
+        <link href="<?php echo $app::asset("/assets/css/main.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
     </head>
     <body>
         <main class="page">
             <div class="links">
                 <?php
-                if (!$referer || strpos($referer, "jahidulpabelislam.com") === false) {
+                if (!$referer || strpos($referer, $siteDomain) === false) {
                     ?>
                     <div class="link-item link-item--site">
-                        <a class="link-item__link" href="https://linkto.jahidulpabelislam.com/site/" target="_blank">
-                            <img class="link-item__image" src="<?php echo $site::asset("/logo.png", null, PUBLIC_ROOT . '../vendor/jpi/personal-core'); ?>" alt="Logo" />
+                        <a class="link-item__link" href="https://linkto.<?php echo $siteDomain ?>/site/" target="_blank">
+                            <img class="link-item__image" src="<?php echo $app::asset("/logo.png", null, JPI_CORE_ROOT . '/assets'); ?>" alt="Logo" />
                             &nbsp;<p class="link-item__text">jahidulpabelislam.com</p>
                         </a>
                     </div>
@@ -87,7 +92,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     <div class="link-item link-item--<?php echo $type; ?>">
                         <a
                             class="link-item__link"
-                            href="https://linkto.jahidulpabelislam.com/<?php echo $type; ?>/"
+                            href="https://linkto.<?php echo "$siteDomain/$type"; ?>/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -97,7 +102,7 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                             <?php } else { ?>
                                 <img
                                     class="link-item__image"
-                                    src="<?php echo $site::asset("/assets/images/" . $icon); ?>"
+                                    src="<?php echo $app::asset("/assets/images/" . $icon); ?>"
                                     alt="Find me on <?php echo "$name $username"; ?>"
                                 />
                             <?php } ?>
@@ -109,6 +114,6 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
             </div>
         </main>
 
-        <script src="<?php echo $site::asset("/assets/js/global.js"); ?>" type="application/javascript"></script>
+        <script src="<?php echo $app::asset("/assets/js/global.js"); ?>" type="application/javascript"></script>
     </body>
 </html>

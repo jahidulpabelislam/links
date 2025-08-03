@@ -1,7 +1,10 @@
 <?php
+
+declare(strict_types=1);
+
 include_once __DIR__ . "/../../../bootstrap.php";
 
-$site = \JPI\Site::get();
+$app = \JPI\App::get();
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +20,9 @@ $site = \JPI\Site::get();
 
         <meta name="robots" content="noindex" />
 
-        <?php $site->renderFavicons(); ?>
+        <?php $app->renderFavicons(); ?>
 
-        <link href="<?php echo $site::asset("/assets/css/error.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
+        <link href="<?php echo $app::asset("/assets/css/error.css"); ?>" rel="stylesheet" type="text/css" media="all" title="style"/>
     </head>
 
     <body>
@@ -27,6 +30,6 @@ $site = \JPI\Site::get();
             <p class="error">Shh, You Have Found Something Very Top Secret!</p>
         </main>
 
-        <script src="<?php echo $site::asset("/assets/js/global.js"); ?>" type="application/javascript"></script>
+        <script src="<?php echo $app::asset("/assets/js/global.js"); ?>" type="application/javascript"></script>
     </body>
 </html>
