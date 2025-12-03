@@ -74,10 +74,10 @@ $referer = $_SERVER["HTTP_REFERER"] ?? null;
                     "github" => [
                         "name" => "GitHub",
                     ],
+                    "packagist" => [],
                     "npm" => [
                         "name" => "NPM",
                     ],
-                    "packagist" => [],
                     "instagram" => [],
                 ];
 
